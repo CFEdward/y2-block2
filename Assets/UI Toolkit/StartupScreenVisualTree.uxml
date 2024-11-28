@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UIStyle.uss?fileID=7433441132597879392&amp;guid=eee92da0149b2f54cba4c5be8c0bf200&amp;type=3#UIStyle" />
+    <engine:VisualElement name="Container" class="container" style="flex-grow: 1; justify-content: center;">
+        <engine:Button text="Accessibility&#10;Options" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" name="OptionsButton" class="button" style="bottom: 0; top: 0; width: 400px; height: 200px; font-size: 38px; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=2afc63393c444cb48bab4ecd728fa076&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold;" />
+        <engine:Button text="Skip" name="SkipButton" class="button" />
+    </engine:VisualElement>
+</engine:UXML>

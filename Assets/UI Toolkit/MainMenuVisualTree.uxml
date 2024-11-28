@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UIStyle.uss?fileID=7433441132597879392&amp;guid=eee92da0149b2f54cba4c5be8c0bf200&amp;type=3#UIStyle" />
+    <engine:VisualElement name="Container" class="container" style="flex-grow: 1; background-color: rgba(0, 183, 255, 0.31);">
+        <engine:Label text="Main Menu" name="Header" class="header" />
+        <engine:Button text="Start" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" name="StartButton" class="button" style="background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; position: relative; justify-content: center; margin-top: 0;" />
+        <engine:Button text="Options" name="OptionsButton" class="button" />
+        <engine:Button text="Exit" name="ExitButton" class="button" />
+    </engine:VisualElement>
+</engine:UXML>

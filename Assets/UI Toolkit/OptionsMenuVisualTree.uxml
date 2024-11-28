@@ -1,0 +1,18 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UIStyle.uss?fileID=7433441132597879392&amp;guid=eee92da0149b2f54cba4c5be8c0bf200&amp;type=3#UIStyle" />
+    <engine:VisualElement name="Container" class="container" style="flex-grow: 1;">
+        <engine:VisualElement name="VisualElement" style="flex-grow: 1; max-height: 20%;" />
+        <engine:VisualElement name="AccessorRow" style="flex-grow: 1; flex-direction: row; align-items: auto; position: relative; bottom: auto; max-height: 10%; justify-content: center; align-self: auto; align-content: auto; margin-bottom: 81px;">
+            <engine:Button text="Back" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" name="BackButton" class="button" style="margin-right: 170px;" />
+            <engine:Button text="Apply" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" name="ApplyButton" class="button" style="margin-left: 170px;" />
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; max-height: 10%; justify-content: center; align-items: center; align-content: center; align-self: auto; flex-direction: row;">
+            <engine:Label text="Sound Volume" style="font-size: 32px; -unity-font-style: bold; color: rgb(255, 255, 255); margin-right: 197px;" />
+            <engine:Slider value="45.3" high-value="100" fill="true" style="width: 260px; margin-left: -10px;" />
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; max-height: 10%; justify-content: center; align-items: center; align-content: center; align-self: auto; flex-direction: row;">
+            <engine:Label text="Font Color" style="font-size: 32px; -unity-font-style: bold; color: rgb(255, 255, 255); margin-right: 197px;" />
+            <engine:DropdownField label="Dropdown" enabled="true" style="margin-left: 38px; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 24px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

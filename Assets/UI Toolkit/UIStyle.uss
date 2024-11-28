@@ -1,0 +1,57 @@
+.header {
+    font-size: 77px;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    align-self: center;
+    margin-top: 110px;
+    margin-bottom: 175px;
+}
+
+.button {
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    align-content: center;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url("project://database/Assets/_Data/Sprites/ButtonNormal.png?fileID=2800000&guid=b24fc472ab89f1f4897c7c581b5b0c38&type=3#ButtonNormal");
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.button:hover {
+    background-image: url("project://database/Assets/_Data/Sprites/ButtonHover.png?fileID=2800000&guid=de4d38ebb44a1cf44be81068eb06477b&type=3#ButtonHover");
+    transition-property: scale;
+    transition-duration: 0.4s;
+    scale: 1.2 1.2;
+    transition-timing-function: ease-out-cubic;
+}
+
+.button:active {
+    background-image: url("project://database/Assets/_Data/Sprites/ButtonPressed.png?fileID=2800000&guid=8a68c3173f930c742883564b5aa62932&type=3#ButtonPressed");
+    scale: 1 1;
+}
+
+.container {
+    background-color: rgba(0, 183, 255, 0.31);
+    align-self: center;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
