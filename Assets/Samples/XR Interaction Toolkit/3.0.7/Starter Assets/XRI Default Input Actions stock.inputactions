@@ -1,5 +1,5 @@
 {
-    "name": "XRI Default Input Actions",
+    "name": "XRI Default Input Actions stock",
     "maps": [
         {
             "name": "XRI Head",
@@ -2046,15 +2046,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Radial Menu",
-                    "type": "Button",
-                    "id": "4b6bac38-221b-4a5e-b538-4b669783c56a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -2341,17 +2332,6 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
                     "action": "Translate Manipulation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b88dc5a4-88c7-410b-ac23-35e83df0e458",
-                    "path": "<XRController>{RightHand}/primaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Radial Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

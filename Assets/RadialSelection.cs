@@ -1,11 +1,9 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
-using UnityEngine.XR.Interaction.Toolkit.Interactors;
-using UnityEngine.XR.Interaction.Toolkit.UI;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 
 public class RadialSelection : MonoBehaviour
@@ -22,21 +20,26 @@ public class RadialSelection : MonoBehaviour
 
     private List<GameObject> spawnedParts = new List<GameObject>();
     private int currentSelectedRadialPart = -1;
+    private int lastSelectedRadialPart = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private InputActionReference spawnMenuButton;
+
+    public void Awake()
     {
-        
+        spawnMenuButton.action.performed += SpawnRadialPart;
+        spawnMenuButton.action.canceled += HideAndTriggerSelected;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnRadialPart();
-        GetSelectedRadialPart();
+        if (radialPartCanvas.gameObject.activeSelf)
+        {
+            GetSelectedRadialPart();
+        }
     }
 
-    public void HideAndTriggerSelected()
+    public void HideAndTriggerSelected(InputAction.CallbackContext context)
     {
         OnPartSelected.Invoke(currentSelectedRadialPart);
         radialPartCanvas.gameObject.SetActive(false);
@@ -45,9 +48,9 @@ public class RadialSelection : MonoBehaviour
     public void GetSelectedRadialPart()
     {
         Vector3 centerToHand = handTransform.position - radialPartCanvas.position;
-        Vector3 centerToHandProojected = Vector3.ProjectOnPlane(centerToHand, radialPartCanvas.forward);
+        Vector3 centerToHandProjected = Vector3.ProjectOnPlane(centerToHand, radialPartCanvas.forward);
 
-        float angle = Vector3.SignedAngle(radialPartCanvas.up, centerToHandProojected, -radialPartCanvas.forward);
+        float angle = Vector3.SignedAngle(radialPartCanvas.up, centerToHandProjected, -radialPartCanvas.forward);
 
         if (angle < 0)
             angle += 360;
@@ -62,7 +65,11 @@ public class RadialSelection : MonoBehaviour
             {
                 spawnedParts[i].GetComponent<Image>().color = Color.yellow;
                 spawnedParts[i].transform.localScale = 1.1f * Vector3.one;
-
+                if (lastSelectedRadialPart != currentSelectedRadialPart)
+                {
+                    HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Right, 1f);
+                    lastSelectedRadialPart = currentSelectedRadialPart;
+                }
             }
             else
             {
@@ -71,8 +78,12 @@ public class RadialSelection : MonoBehaviour
             }
         }
     }
-    public void SpawnRadialPart()
+    public void SpawnRadialPart(InputAction.CallbackContext context)
     {
+        radialPartCanvas.gameObject.SetActive(true);
+        radialPartCanvas.position = handTransform.position;
+        radialPartCanvas.rotation = handTransform.rotation;
+
         foreach (var item in spawnedParts)
         {
             Destroy(item);
@@ -86,13 +97,13 @@ public class RadialSelection : MonoBehaviour
             float angle = - i * 360 / numberOfRadialPart - angleBetweenPart/2;
             Vector3 radialPartEulerAngle = new Vector3(0, 0, angle);
 
-            GameObject spawnedRadialpart = Instantiate(radialPartPrefab, radialPartCanvas);
-            spawnedRadialpart.transform.position = radialPartCanvas.position;
-            spawnedRadialpart.transform.localEulerAngles = radialPartEulerAngle;
+            GameObject spawnedRadialPart = Instantiate(radialPartPrefab, radialPartCanvas);
+            spawnedRadialPart.transform.position = radialPartCanvas.position;
+            spawnedRadialPart.transform.localEulerAngles = radialPartEulerAngle;
 
-            spawnedRadialpart.GetComponent<Image>().fillAmount = (1 / (float)numberOfRadialPart) - (angleBetweenPart/360);
+            spawnedRadialPart.GetComponent<Image>().fillAmount = (1 / (float)numberOfRadialPart) - (angleBetweenPart/360);
 
-            spawnedParts.Add(spawnedRadialpart);
+            spawnedParts.Add(spawnedRadialPart);
         }
     }
 }
