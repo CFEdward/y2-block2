@@ -354,6 +354,8 @@ MonoBehaviour:
   numberOfRadialPart: 5
   radialPartPrefab: {fileID: 8896938004435516270, guid: 2e0ec70aa10024045884df44d4de3111, type: 3}
   radialPartCanvas: {fileID: 407735443}
+  angleBetweenPart: 10
+  handTransform: {fileID: 1563870440}
 --- !u!4 &613420419
 Transform:
   m_ObjectHideFlags: 0
@@ -547,6 +549,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1563870439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563870440}
+  m_Layer: 0
+  m_Name: Hand Transform Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1563870440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563870439}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3614397, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053959830
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,3 +667,4 @@ SceneRoots:
   - {fileID: 883497805}
   - {fileID: 801080548}
   - {fileID: 2053959833}
+  - {fileID: 1563870440}
