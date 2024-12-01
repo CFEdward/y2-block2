@@ -106,4 +106,10 @@ public class RadialSelection : MonoBehaviour
             spawnedParts.Add(spawnedRadialPart);
         }
     }
+
+    private void OnDisable()
+    {
+        spawnMenuButton.action.performed -= SpawnRadialPart;
+        spawnMenuButton.action.canceled -= HideAndTriggerSelected;
+    }
 }
