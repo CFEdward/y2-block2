@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.UI;
 
 [System.Serializable]
-public class HapticSettings
+public class HapticUISettings
 {
     public bool active = true;
     [Range(0f, 1f)]
@@ -16,10 +16,10 @@ public class HapticSettings
 
 public class UIHapticFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private HapticSettings OnHoverEnter;
-    [SerializeField] private HapticSettings OnHoverExit;
-    [SerializeField] private HapticSettings OnSelectEnter;
-    [SerializeField] private HapticSettings OnSelectExit;
+    [SerializeField] private HapticUISettings OnHoverEnter;
+    [SerializeField] private HapticUISettings OnHoverExit;
+    [SerializeField] private HapticUISettings OnSelectEnter;
+    [SerializeField] private HapticUISettings OnSelectExit;
 
     private XRUIInputModule InputModule => EventSystem.current.currentInputModule as XRUIInputModule;
     
@@ -55,7 +55,7 @@ public class UIHapticFeedback : MonoBehaviour, IPointerEnterHandler, IPointerExi
         }
     }
 
-    private void TriggerHaptic(PointerEventData eventData, HapticSettings hapticSettings)
+    private void TriggerHaptic(PointerEventData eventData, HapticUISettings hapticSettings)
     {
         NearFarInteractor interactor = InputModule.GetInteractor(eventData.pointerId) as NearFarInteractor;
         if (!interactor) return;
