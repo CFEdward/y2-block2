@@ -303,7 +303,7 @@ PrefabInstance:
     - target: {fileID: 6952908456308592394, guid: f72709c20932ebe44b6981184fb9386b, type: 3}
       propertyPath: spawnMenuButton
       value: 
-      objectReference: {fileID: -1444983561394163249, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+      objectReference: {fileID: 3732142837033316893, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 6952908456308592394, guid: f72709c20932ebe44b6981184fb9386b, type: 3}
       propertyPath: OnPartSelected.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -686,6 +686,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6936007439461507679, guid: 6f8cdeae34bf5624dafa3e49bcd576dd, type: 3}
+      propertyPath: HapticOnSelectEntered.active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6936007439461507679, guid: 6f8cdeae34bf5624dafa3e49bcd576dd, type: 3}
       propertyPath: HapticOnSelectEntered.amplitude
       value: 0.2
       objectReference: {fileID: 0}
@@ -810,6 +814,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1104854928232949187, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_PlayHoverEntered
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104854928232949187, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_PlaySelectEntered
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104854928232949187, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_HapticImpulsePlayer
       value: 
       objectReference: {fileID: 1481635667}
@@ -820,6 +832,14 @@ PrefabInstance:
     - target: {fileID: 2286644115252225774, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_RaycastTriggerInteraction
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478073404175180043, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_PlayHoverEntered
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478073404175180043, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_PlaySelectEntered
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2478073404175180043, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_HapticImpulsePlayer
