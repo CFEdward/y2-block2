@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Anchor
   - Basketball
+  - Attach
+  - Metal
+  - Rock
+  - Fish
   layers:
   - Default
   - TransparentFX
@@ -13,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Metal
+  - Rock
+  - Fish
   - 
   - 
   - 

@@ -55,7 +55,7 @@ public class RadialSelection : MonoBehaviour
         if (angle < 0)
             angle += 360;
 
-        Debug.Log("ANGLE" +  angle);
+        //Debug.Log("ANGLE" +  angle);
 
         currentSelectedRadialPart = (int) angle * numberOfRadialPart / 360;
 
@@ -67,7 +67,7 @@ public class RadialSelection : MonoBehaviour
                 spawnedParts[i].transform.localScale = 1.1f * Vector3.one;
                 if (lastSelectedRadialPart != currentSelectedRadialPart)
                 {
-                    HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Right, 1f);
+                    HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Left, 1f);
                     lastSelectedRadialPart = currentSelectedRadialPart;
                 }
             }
