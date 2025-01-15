@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &67412764 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011928778752, guid: bac85bcbcdc58924f840d203376147c2, type: 3}
-  m_PrefabInstance: {fileID: 700176359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &204563203
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,26 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f19f43df7ca85047a6f24f4a56e698d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &648904041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8903199259606294710, guid: 9451a597515774240bd86a7b9c5aa50b, type: 3}
-  m_PrefabInstance: {fileID: 8157321305883892431}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &648904048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648904041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239dc5b742cf9c04094a1f6ddc1807ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controllerTag: VRController
-  vibrationDuration: 0.1
-  vibrationStrength: 0.5
 --- !u!1001 &700176359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -754,30 +729,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 224000010550048884, guid: bac85bcbcdc58924f840d203376147c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1575057659}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1000011928778752, guid: bac85bcbcdc58924f840d203376147c2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 700176365}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bac85bcbcdc58924f840d203376147c2, type: 3}
 --- !u!224 &700176360 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224000010550048884, guid: bac85bcbcdc58924f840d203376147c2, type: 3}
   m_PrefabInstance: {fileID: 700176359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &700176365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67412764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e1278a9cae5a541afc617108452897, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  score: 0
 --- !u!1 &817094391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1575057657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1808,10 +1766,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock
       objectReference: {fileID: 0}
-    - target: {fileID: 2080655387225526166, guid: 3bc0afc4626611b4dba1911970baf257, type: 3}
-      propertyPath: m_TagString
-      value: Scorable
-      objectReference: {fileID: 0}
     - target: {fileID: 9180854256701559824, guid: 3bc0afc4626611b4dba1911970baf257, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.845
@@ -1909,10 +1863,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish
       objectReference: {fileID: 0}
-    - target: {fileID: 6966890677443338387, guid: 9a245a420d6755342adb281437766c81, type: 3}
-      propertyPath: m_TagString
-      value: Scorable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1966,25 +1916,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7390631665502570241, guid: 9451a597515774240bd86a7b9c5aa50b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8903199259606294710, guid: 9451a597515774240bd86a7b9c5aa50b, type: 3}
       propertyPath: m_Name
       value: Metal Chunk
       objectReference: {fileID: 0}
-    - target: {fileID: 8903199259606294710, guid: 9451a597515774240bd86a7b9c5aa50b, type: 3}
-      propertyPath: m_TagString
-      value: Scorable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8903199259606294710, guid: 9451a597515774240bd86a7b9c5aa50b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 648904048}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9451a597515774240bd86a7b9c5aa50b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

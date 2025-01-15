@@ -13,7 +13,7 @@ public class Collect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Metal") || other.CompareTag("Rock") || other.CompareTag("Fish"))
+        if (other.CompareTag("Scorable"))
         {
             if (other.GetComponentInParent<Magnet>().isItemAttached)
             collectedItems.Add(other.GetComponentInParent<Magnet>().itemAttached);
