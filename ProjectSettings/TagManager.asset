@@ -11,6 +11,7 @@ TagManager:
   - Rock
   - Fish
   - Scorable
+  - VRController
   layers:
   - Default
   - TransparentFX
