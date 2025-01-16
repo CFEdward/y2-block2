@@ -107,7 +107,7 @@ public class Magnet : MonoBehaviour
             //magnetHit.rigidbody.AddForce(transform.position.normalized * -.3f, ForceMode.VelocityChange);
             magnetHit.transform.position = Vector3.MoveTowards(magnetHit.transform.position, transform.position, step);
 
-            if (Vector3.Distance(magnetHit.transform.position, transform.position) < 1f)
+            if (Vector3.Distance(magnetHit.transform.position, transform.position) <= 1.5f)
             {
                 itemAttached = magnetHit.transform.gameObject;
                 pullButton.action.Disable();

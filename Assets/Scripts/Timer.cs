@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     [Header("Component")]
     public TextMeshProUGUI timerText;
