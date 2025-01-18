@@ -20,7 +20,7 @@ public class Magnet : MonoBehaviour
     private GameObject hitLastFrame = null;
     [SerializeField] private Material highlightMat;
 
-    [SerializeField] private float speed = .5f;
+    //[SerializeField] private float speed = .5f;
     public InputActionReference pullButton;
     private bool validHit;
     private bool shouldPull;
