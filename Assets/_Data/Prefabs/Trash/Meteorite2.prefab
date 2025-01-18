@@ -101,6 +101,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 5771327516601367773, guid: 9228d9e29807a554591d4d2064527cc7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771327516601367773, guid: 9228d9e29807a554591d4d2064527cc7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ba00334f487fd48aba25d8e161fbe0, type: 2}
     - target: {fileID: 8660088457645884838, guid: 9228d9e29807a554591d4d2064527cc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

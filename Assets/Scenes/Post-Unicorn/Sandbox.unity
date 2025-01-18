@@ -1477,6 +1477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnetType: 0
+  highlightMat: {fileID: 2100000, guid: c2ba00334f487fd48aba25d8e161fbe0, type: 2}
   speed: 5
   pullButton: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   attachPoint: {fileID: 1847725884}
@@ -2626,6 +2627,10 @@ PrefabInstance:
     - target: {fileID: 1818101969919638016, guid: 9c37d9401cb5f734aaac40c05d52bfdc, type: 3}
       propertyPath: m_Name
       value: Meteorite2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144433785459563372, guid: 9c37d9401cb5f734aaac40c05d52bfdc, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4808208365023604234, guid: 9c37d9401cb5f734aaac40c05d52bfdc, type: 3}
       propertyPath: m_LocalPosition.x
