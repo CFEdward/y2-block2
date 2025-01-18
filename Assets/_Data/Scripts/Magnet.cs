@@ -27,8 +27,6 @@ public class Magnet : MonoBehaviour
 
     private void Awake()
     {
-        //magnetType = MagnetType.Metal;
-
         pullButton.action.performed += i => shouldPull = true;
         pullButton.action.canceled += i => shouldPull = false;
     }
@@ -81,8 +79,6 @@ public class Magnet : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * magnetHit.distance, Color.red);
             Debug.Log(magnetHit.collider);
 
-            //Vector3 projectedPoint = HandleUtility.ProjectPointLine(magnetHit.collider.transform.position, transform.position, transform.TransformDirection(Vector3.forward) * 1100f);
-            //Debug.Log(projectedPoint - magnetHit.collider.transform.position);
             float distance = HandleUtility.DistancePointLine(magnetHit.collider.transform.position, transform.position, transform.TransformDirection(Vector3.forward) * 1100f);
             Debug.Log(distance);
 
@@ -103,21 +99,17 @@ public class Magnet : MonoBehaviour
         {
             magnetHit.rigidbody.linearVelocity = Vector3.zero;
             magnetHit.rigidbody.angularVelocity = Vector3.zero;
-            //magnetHit.transform.position = magnetHit.point;
-            //magnetHit.rigidbody.AddForce(transform.position.normalized * -.3f, ForceMode.VelocityChange);
             magnetHit.transform.position = Vector3.MoveTowards(magnetHit.transform.position, transform.position, step);
 
-            if (Vector3.Distance(magnetHit.transform.position, transform.position) <= 1.5f)
+            if (Vector3.Distance(magnetHit.transform.position, transform.position) <= 2f)
             {
                 itemAttached = magnetHit.transform.gameObject;
                 pullButton.action.Disable();
-                //Destroy(magnetHit.transform.gameObject);
                 shouldPull = false; // just in case
                 isItemAttached = true;
                 itemAttached.transform.parent = attachPoint;
                 itemAttached.transform.localPosition = Vector3.zero;
                 itemAttached.GetComponent<Rigidbody>().isKinematic = true;
-                //itemAttached.GetComponent<Collider>().enabled = false;
 
                 return;
             }
