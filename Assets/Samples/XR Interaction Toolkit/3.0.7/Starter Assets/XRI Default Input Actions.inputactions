@@ -975,15 +975,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "RadialMenu",
-                    "type": "Button",
-                    "id": "0514b1b5-f284-447d-a4c6-6ee1a7cd3161",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1039,17 +1030,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f52a5926-c843-4542-a1eb-0827d64d75b6",
-                    "path": "<XRController>{LeftHand}/primaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RadialMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1969,6 +1949,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "RadialMenu",
+                    "type": "Button",
+                    "id": "c529ec36-fc7e-42fb-b3ec-047e48f0065d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Select Value",
                     "type": "Value",
                     "id": "39bbf1ac-21a3-413d-90f6-6dbf6efeaabe",
@@ -2121,6 +2110,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0ae6749-13df-4f21-b99d-0c81eca70132",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RadialMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

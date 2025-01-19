@@ -8,8 +8,8 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 public enum MagnetType
 {
     Metal,
+    Fish,
     Rock,
-    Fish
 }
 
 public class Magnet : MonoBehaviour
@@ -63,13 +63,13 @@ public class Magnet : MonoBehaviour
                 mask = LayerMask.GetMask("Metal");
                 Debug.Log("Current Magnet equipped: Metal");
                 break;
-            case MagnetType.Rock:
-                mask = LayerMask.GetMask("Rock");
-                Debug.Log("Current Magnet equipped: Rock");
-                break;
             case MagnetType.Fish:
                 mask = LayerMask.GetMask("Fish");
                 Debug.Log("Current Magnet equipped: Fish");
+                break;
+            case MagnetType.Rock:
+                mask = LayerMask.GetMask("Rock");
+                Debug.Log("Current Magnet equipped: Rock");
                 break;
 
             default: break;
