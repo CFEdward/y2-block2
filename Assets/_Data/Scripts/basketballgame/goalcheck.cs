@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class goalcheck : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip goalSound;
-    [SerializeField] Transform ballSpawnPosition;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip goalSound;
+    //[SerializeField] private Transform ballSpawnPosition;
+    [SerializeField] private string tagName = "Fish";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,18 +20,17 @@ public class goalcheck : MonoBehaviour
         
     }
 
-    
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Basketball"))
+        if(other.gameObject.CompareTag(tagName))
         {
             audioSource.clip = goalSound;
             audioSource.Play();
-            GameObject ball = other.gameObject;
-            ball.transform.position = ballSpawnPosition.position;
-            ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
-            ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            Destroy(other.gameObject);
+            //GameObject ball = other.gameObject;
+            //ball.transform.position = ballSpawnPosition.position;
+            //ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+            //ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
     }
 }
