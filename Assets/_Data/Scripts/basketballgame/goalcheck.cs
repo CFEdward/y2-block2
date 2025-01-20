@@ -14,6 +14,7 @@ public class goalcheck : MonoBehaviour
         if(other.gameObject.CompareTag(tagName))
         {
             audioSource.clip = goalSound;
+            audioSource.volume = .5f;
             audioSource.Play();
             Destroy(other.gameObject);
             if (currentScore <= 3) currentScore++;

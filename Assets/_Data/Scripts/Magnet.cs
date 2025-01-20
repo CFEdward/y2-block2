@@ -31,10 +31,14 @@ public class Magnet : MonoBehaviour
     public bool isItemAttached = false;
     public GameObject itemAttached = null;
 
+    private VisualEffect lineVFX;
+
     private void Awake()
     {
         pullButton.action.performed += i => shouldPull = true;
         pullButton.action.canceled += i => shouldPull = false;
+
+        lineVFX = GetComponent<VisualEffect>();
     }
 
     // Update is called once per frame
@@ -91,7 +95,7 @@ public class Magnet : MonoBehaviour
             hitLastFrame = magnetHit.transform.gameObject;
             List<Material> mats = new();
             magnetHit.transform.GetComponent<MeshRenderer>().GetMaterials(mats);
-            if (mats.Count == 1) magnetHit.transform.GetComponent<MeshRenderer>().AddMaterial(highlightMat);
+            if (mats.Count == 2) magnetHit.transform.GetComponent<MeshRenderer>().AddMaterial(highlightMat);
             HapticsUtility.SendHapticImpulse(1f - Mathf.Clamp(distance, 0f, 1f), .1f, HapticsUtility.Controller.Right);
 
             return distance;
@@ -102,7 +106,7 @@ public class Magnet : MonoBehaviour
             {
                 List<Material> mats = new();
                 hitLastFrame.GetComponent<MeshRenderer>().GetMaterials(mats);
-                mats.RemoveAt(1);
+                mats.RemoveAt(2);
                 hitLastFrame.GetComponent<MeshRenderer>().SetMaterials(mats);
             }
             hitLastFrame = null;
@@ -113,13 +117,16 @@ public class Magnet : MonoBehaviour
     private void Pull()
     {
         //var step = (13f - Mathf.Clamp(magnetHit.distance, 3f, 10f)) * Time.deltaTime;
-        var step = Mathf.Lerp(8f, 4f, magnetHit.distance) * Time.deltaTime;
+        var step = Mathf.Lerp(10f, 5f, magnetHit.distance) * Time.deltaTime;
         if (validHit)
         {
             foreach (var visualEffect in  visualEffects)
             {
                 visualEffect.gameObject.SetActive(true);
             }
+
+            lineVFX.enabled = true;
+            transform.GetChild(0).transform.position = magnetHit.transform.position;
 
             magnetHit.rigidbody.linearVelocity = Vector3.zero;
             magnetHit.rigidbody.angularVelocity = Vector3.zero;
@@ -133,9 +140,11 @@ public class Magnet : MonoBehaviour
                 isItemAttached = true;
                 itemAttached.transform.parent = attachPoint;
                 itemAttached.transform.localPosition = Vector3.zero;
-                if (magnetType == (MagnetType)0 && itemAttached.transform.localScale.x <= 8f) itemAttached.transform.localScale = new Vector3(1.5f, 1.5f, 6f);
+                if (magnetType == (MagnetType)0 && itemAttached.transform.localScale.x <= 24f) itemAttached.transform.localScale = new Vector3(1.5f, 1.5f, 6f);
+                if (magnetType == (MagnetType)0 && itemAttached.transform.localScale.x >= 25f) itemAttached.transform.localScale = new Vector3(5.55f, 5.55f, 3.864f);
                 if (magnetType == (MagnetType)1) itemAttached.transform.localScale = new Vector3(1.35f, 1.35f, 10.9f);
-                if (magnetType == (MagnetType)2 && itemAttached.transform.localScale.x <= 10f) itemAttached.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+                if (magnetType == (MagnetType)2 && itemAttached.transform.localScale.x <= 30f) itemAttached.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+                if (magnetType == (MagnetType)2 && itemAttached.transform.localScale.x >= 32f) itemAttached.transform.localScale = new Vector3(7f, 7f, 7f);
                 itemAttached.GetComponent<Rigidbody>().isKinematic = true;
 
                 foreach (var visualEffect in visualEffects)

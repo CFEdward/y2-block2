@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3566378134555664153}
   - component: {fileID: 4311793176323419026}
   - component: {fileID: 5231043746930731343}
+  - component: {fileID: 3004755792909153180}
   m_Layer: 0
   m_Name: Hoop
   m_TagString: Untagged
@@ -89,6 +90,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3004755792909153180
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058133280686993114}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2124705421725058983, guid: de0ed7d077cc79740986ce7f6bc3b013, type: 3}
 --- !u!1 &3814223618150764591
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +488,7 @@ GameObject:
   - component: {fileID: 839243472499499894}
   - component: {fileID: 8231875964736409264}
   - component: {fileID: 9118070245754066528}
+  - component: {fileID: 7870685162186821060}
   m_Layer: 0
   m_Name: Sign
   m_TagString: Untagged
@@ -540,3 +564,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7870685162186821060
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696441625235108285}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 0fe12a08b900f53478d0ea6e185da77f, type: 3}
