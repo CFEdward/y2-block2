@@ -118,7 +118,7 @@ public class Magnet : MonoBehaviour
         {
             foreach (var visualEffect in  visualEffects)
             {
-                visualEffect.enabled = true;
+                visualEffect.gameObject.SetActive(true);
             }
 
             magnetHit.rigidbody.linearVelocity = Vector3.zero;
@@ -138,6 +138,11 @@ public class Magnet : MonoBehaviour
                 if (magnetType == (MagnetType)2 && itemAttached.transform.localScale.x <= 10f) itemAttached.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
                 itemAttached.GetComponent<Rigidbody>().isKinematic = true;
 
+                foreach (var visualEffect in visualEffects)
+                {
+                    visualEffect.gameObject.SetActive(false);
+                }
+
                 return;
             }
         }
@@ -145,7 +150,7 @@ public class Magnet : MonoBehaviour
         {
             foreach (var visualEffect in visualEffects)
             {
-                visualEffect.enabled = false;
+                visualEffect.gameObject.SetActive(false);
             }
         }
     }

@@ -156,6 +156,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magnet VFX
       objectReference: {fileID: 0}
+    - target: {fileID: 3598108860829140304, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452114173876964813, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6895956878462877725, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
       propertyPath: m_ResetSeedOnPlay
       value: 1
@@ -241,6 +249,14 @@ PrefabInstance:
     - target: {fileID: 3598108860829140304, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
       propertyPath: m_Name
       value: Magnet VFX (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3598108860829140304, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452114173876964813, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6895956878462877725, guid: aa92d0952a66db2499bfd5ec160ad5e7, type: 3}
       propertyPath: m_ResetSeedOnPlay

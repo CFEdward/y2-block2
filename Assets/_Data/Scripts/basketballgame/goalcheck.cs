@@ -17,6 +17,7 @@ public class goalcheck : MonoBehaviour
             audioSource.Play();
             Destroy(other.gameObject);
             if (currentScore <= 3) currentScore++;
+            else currentScore = 3;
             scoreText.text = currentScore.ToString() + "/3";
         }
     }
