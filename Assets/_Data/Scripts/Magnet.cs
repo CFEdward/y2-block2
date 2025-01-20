@@ -3,6 +3,7 @@ using Unity.XR.CoreUtils;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 public enum MagnetType
@@ -19,6 +20,7 @@ public class Magnet : MonoBehaviour
     private LayerMask mask = 0;
     private GameObject hitLastFrame = null;
     [SerializeField] private Material highlightMat;
+    [SerializeField] private VisualEffect[] visualEffects;
 
     //[SerializeField] private float speed = .5f;
     public InputActionReference pullButton;
@@ -114,6 +116,11 @@ public class Magnet : MonoBehaviour
         var step = Mathf.Lerp(8f, 4f, magnetHit.distance) * Time.deltaTime;
         if (validHit)
         {
+            foreach (var visualEffect in  visualEffects)
+            {
+                visualEffect.enabled = true;
+            }
+
             magnetHit.rigidbody.linearVelocity = Vector3.zero;
             magnetHit.rigidbody.angularVelocity = Vector3.zero;
             magnetHit.transform.position = Vector3.MoveTowards(magnetHit.transform.position, transform.position, step);
@@ -132,6 +139,13 @@ public class Magnet : MonoBehaviour
                 itemAttached.GetComponent<Rigidbody>().isKinematic = true;
 
                 return;
+            }
+        }
+        else
+        {
+            foreach (var visualEffect in visualEffects)
+            {
+                visualEffect.enabled = false;
             }
         }
     }
