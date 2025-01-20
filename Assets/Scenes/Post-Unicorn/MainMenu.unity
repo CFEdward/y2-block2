@@ -194,6 +194,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188730014}
   m_CullTransparentMesh: 1
+--- !u!1 &358254800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7859262828204703070, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+  m_PrefabInstance: {fileID: 1124345185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &362490292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,7 +2262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &625533656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3862,7 +3867,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -351.77753
       objectReference: {fileID: 0}
+    - target: {fileID: 5321507411421876554, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5918014839680902945, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351800471750802708, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -3885,6 +3898,34 @@ PrefabInstance:
     - target: {fileID: 7389943897628890077, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_Name
       value: Custom XR Origin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609607901826649040, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportMode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609607901826649040, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportModeCancel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609607901826649040, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_NearFarEnableTeleportDuringNearInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportMode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportModeCancel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_SmoothMotionEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_NearFarEnableTeleportDuringNearInteraction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8628070360049134371, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3928,7 +3969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152075589891568324, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3951,7 +3992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1138960554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5647,7 +5688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1557459745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5687,6 +5728,7 @@ GameObject:
   - component: {fileID: 1584980171}
   - component: {fileID: 1584980175}
   - component: {fileID: 1584980176}
+  - component: {fileID: 1584980177}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5814,6 +5856,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &1584980177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584980170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44fac88df027ec3488a0fa7846263502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 358254800}
+  startMenu: {fileID: 1138960553}
 --- !u!1 &1597979456
 GameObject:
   m_ObjectHideFlags: 0
