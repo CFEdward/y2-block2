@@ -126,6 +126,9 @@ public class Magnet : MonoBehaviour
                 isItemAttached = true;
                 itemAttached.transform.parent = attachPoint;
                 itemAttached.transform.localPosition = Vector3.zero;
+                if (magnetType == (MagnetType)0 && itemAttached.transform.localScale.x <= 8f) itemAttached.transform.localScale = new Vector3(1.5f, 1.5f, 6f);
+                if (magnetType == (MagnetType)1) itemAttached.transform.localScale = new Vector3(1.35f, 1.35f, 10.9f);
+                if (magnetType == (MagnetType)2 && itemAttached.transform.localScale.x <= 10f) itemAttached.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
                 itemAttached.GetComponent<Rigidbody>().isKinematic = true;
 
                 return;

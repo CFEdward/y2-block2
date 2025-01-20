@@ -21,6 +21,7 @@ public class RadialSelection : MonoBehaviour
 
     private List<GameObject> spawnedParts = new List<GameObject>();
     private int currentSelectedRadialPart = -1;
+    private int lastSelectedRadialPart = 0;
 
     [SerializeField] private InputActionReference spawnMenuButton;
 
@@ -65,7 +66,12 @@ public class RadialSelection : MonoBehaviour
             {
                 spawnedParts[i].GetComponent<Image>().color = Color.yellow;
                 spawnedParts[i].transform.localScale = 1.1f * Vector3.one;
-                HapticsUtility.SendHapticImpulse(.7f, .2f, HapticsUtility.Controller.Right);
+                if (lastSelectedRadialPart != currentSelectedRadialPart)
+                {
+                    HapticsUtility.SendHapticImpulse(.7f, .2f, HapticsUtility.Controller.Right);
+                    
+                    lastSelectedRadialPart = currentSelectedRadialPart;
+                }
             }
             else
             {

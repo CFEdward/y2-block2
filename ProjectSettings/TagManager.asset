@@ -12,6 +12,8 @@ TagManager:
   - Fish
   - Scorable
   - VRController
+  - BigRock
+  - BigNail
   layers:
   - Default
   - TransparentFX
