@@ -2638,12 +2638,18 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: Pulse Speed
+        m_Overridden: 1
+      - m_Value: 3
+        m_Name: Pusle Spawn Amount
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 10.242859, y: 2.17624, z: 39.111885}
+      - m_Value: {x: 0.00000047054692, y: 0, z: -0.00000031247976}
         m_Name: AttractorV
         m_Overridden: 1
       - m_Value: {x: 10.242859, y: 2.17624, z: 39.111885}
@@ -2677,7 +2683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Space: 0
+  Space: 2
   m_Property:
     m_Name: AttractorV
   Target: {fileID: 1364570787}

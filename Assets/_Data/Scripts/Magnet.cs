@@ -51,6 +51,8 @@ public class Magnet : MonoBehaviour
         else if (SearchRay() >= 1f)
         {
             validHit = false;
+            lineVFX.enabled = false;
+            transform.GetChild(0).transform.localPosition = Vector3.zero;
         }
     }
 
@@ -125,8 +127,9 @@ public class Magnet : MonoBehaviour
                 visualEffect.gameObject.SetActive(true);
             }
 
-            lineVFX.enabled = true;
             transform.GetChild(0).transform.position = magnetHit.transform.position;
+            transform.GetChild(0).LookAt(magnetHit.transform.position);
+            lineVFX.enabled = true;
 
             magnetHit.rigidbody.linearVelocity = Vector3.zero;
             magnetHit.rigidbody.angularVelocity = Vector3.zero;
@@ -134,6 +137,9 @@ public class Magnet : MonoBehaviour
 
             if (Vector3.Distance(magnetHit.transform.position, transform.position) <= 2f)
             {
+                lineVFX.enabled = false;
+                transform.GetChild(0).transform.localPosition = Vector3.zero;
+
                 itemAttached = magnetHit.transform.gameObject;
                 pullButton.action.Disable();
                 shouldPull = false; // just in case
