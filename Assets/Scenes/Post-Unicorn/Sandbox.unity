@@ -2104,6 +2104,22 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3757503210021106094, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757503210021106094, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757503210021106094, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757503210021106094, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4500072275675269581, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2228,6 +2244,22 @@ PrefabInstance:
       propertyPath: pullButton
       value: 
       objectReference: {fileID: 1096270274053813471, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 8018956007815086227, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018956007815086227, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018956007815086227, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018956007815086227, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8566446128724733646, guid: 2fc62a7d046d6dd4080a3d97a215273d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2625,6 +2657,10 @@ PrefabInstance:
       propertyPath: m_HapticImpulsePlayer
       value: 
       objectReference: {fileID: 1481635667}
+    - target: {fileID: 2026921765533875177, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2097713562242252221, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_IsActive
       value: 1

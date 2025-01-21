@@ -12,7 +12,10 @@ public class MenuPosition : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0) Show();
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            transform.parent = null;
+        }
         else
         {
             pullButton.action.performed += ToggleMenu;

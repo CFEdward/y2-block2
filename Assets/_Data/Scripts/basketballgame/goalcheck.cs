@@ -20,7 +20,7 @@ public class goalcheck : MonoBehaviour
             HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Left);
             HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Right);
             Destroy(other.gameObject);
-            if (currentScore <= 3) currentScore++;
+            if (currentScore < 3) currentScore++;
             else currentScore = 3;
             scoreText.text = currentScore.ToString() + "/3";
         }
