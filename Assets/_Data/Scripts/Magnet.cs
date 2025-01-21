@@ -91,7 +91,8 @@ public class Magnet : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * magnetHit.distance, Color.red);
             Debug.Log(magnetHit.collider);
 
-            float distance = HandleUtility.DistancePointLine(magnetHit.collider.transform.position, transform.position, transform.TransformDirection(Vector3.forward) * 1100f);
+            float distance = Vector3.Cross(transform.TransformDirection(Vector3.forward), magnetHit.collider.transform.position - transform.position).magnitude;
+            //float distance = HandleUtility.DistancePointLine(magnetHit.collider.transform.position, transform.position, transform.TransformDirection(Vector3.forward) * 1100f);
             Debug.Log(distance);
 
             hitLastFrame = magnetHit.transform.gameObject;
@@ -119,7 +120,7 @@ public class Magnet : MonoBehaviour
     private void Pull()
     {
         //var step = (13f - Mathf.Clamp(magnetHit.distance, 3f, 10f)) * Time.deltaTime;
-        var step = Mathf.Lerp(10f, 5f, magnetHit.distance) * Time.deltaTime;
+        var step = Mathf.Lerp(15f, 8f, magnetHit.distance) * Time.deltaTime;
         if (validHit)
         {
             foreach (var visualEffect in  visualEffects)

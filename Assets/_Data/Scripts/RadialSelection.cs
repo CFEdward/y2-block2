@@ -12,7 +12,8 @@ public class RadialSelection : MonoBehaviour
     [Range(2,10)]
     public int numberOfRadialPart;
     public GameObject[] radialPartPrefabs;
-    public GameObject radialCenter;
+    public GameObject radialCenterPrefab;
+    private GameObject radialCenter = null;
     public Transform radialPartCanvas;
     public float angleBetweenPart = 10;
     public Transform handTransform;
@@ -44,6 +45,7 @@ public class RadialSelection : MonoBehaviour
     {
         OnPartSelected.Invoke(currentSelectedRadialPart);
         radialPartCanvas.gameObject.SetActive(false);
+        Destroy(radialCenter);
     }
 
     public void GetSelectedRadialPart()
@@ -64,7 +66,7 @@ public class RadialSelection : MonoBehaviour
         {
             if(i == currentSelectedRadialPart)
             {
-                spawnedParts[i].GetComponent<Image>().color = Color.yellow;
+                spawnedParts[i].GetComponent<Image>().color = Color.cyan;
                 spawnedParts[i].transform.localScale = 1.1f * Vector3.one;
                 if (lastSelectedRadialPart != currentSelectedRadialPart)
                 {
@@ -108,7 +110,7 @@ public class RadialSelection : MonoBehaviour
             spawnedParts.Add(spawnedRadialPart);
         }
 
-        Instantiate(radialCenter, radialPartCanvas);
+        radialCenter = Instantiate(radialCenterPrefab, radialPartCanvas);
         radialCenter.transform.position = radialPartCanvas.position;
     }
 

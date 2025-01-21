@@ -1,0 +1,5 @@
+G:/repositories/Unity Projects/y2-block2/.utmp/RelWithDebInfo/2dg5c4p1/arm64-v8a/CMakeFiles/edit_cache.dir
+G:/repositories/Unity Projects/y2-block2/.utmp/RelWithDebInfo/2dg5c4p1/arm64-v8a/CMakeFiles/rebuild_cache.dir
+G:/repositories/Unity Projects/y2-block2/.utmp/RelWithDebInfo/2dg5c4p1/arm64-v8a/GameActivity/CMakeFiles/game.dir
+G:/repositories/Unity Projects/y2-block2/.utmp/RelWithDebInfo/2dg5c4p1/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+G:/repositories/Unity Projects/y2-block2/.utmp/RelWithDebInfo/2dg5c4p1/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

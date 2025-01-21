@@ -732,6 +732,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6952908456308592394, guid: f72709c20932ebe44b6981184fb9386b, type: 3}
+      propertyPath: radialCenterPrefab
+      value: 
+      objectReference: {fileID: 8896938004435516270, guid: 503001200bf03cd48981a66cb76078d1, type: 3}
+    - target: {fileID: 6952908456308592394, guid: f72709c20932ebe44b6981184fb9386b, type: 3}
       propertyPath: radialPartPrefabs.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1684,6 +1688,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ab58d5d7c144b3243941820a905c6154, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ab58d5d7c144b3243941820a905c6154, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ab58d5d7c144b3243941820a905c6154, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ab58d5d7c144b3243941820a905c6154, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ab58d5d7c144b3243941820a905c6154, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2665,6 +2681,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5321507411421876554, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351800471750802708, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6565702637548621182, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2686,12 +2710,28 @@ PrefabInstance:
       value: Custom XR Origin
       objectReference: {fileID: 0}
     - target: {fileID: 7609607901826649040, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportMode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609607901826649040, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportModeCancel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609607901826649040, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_NearFarEnableTeleportDuringNearInteraction
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7951727557730587175, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportMode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
+      propertyPath: m_TeleportModeCancel
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8587482999798025755, guid: 19e06d81339cb92499168925a979acf0, type: 3}
       propertyPath: m_NearFarEnableTeleportDuringNearInteraction
