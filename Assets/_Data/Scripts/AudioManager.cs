@@ -32,10 +32,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-//    void Start ()
-//   {
-//        Play("Sparks");
-//    }
+    void Start ()
+    {
+        Play("Ambient");
+    }
 
 
     public void Play(string name)
@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
                 return;
             }
         //}
-
+        if (s.name == "Ambient") s.source.pitch = .04f;
         
         if (s == null)
         {

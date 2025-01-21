@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 public class goalcheck : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class goalcheck : MonoBehaviour
             audioSource.clip = goalSound;
             audioSource.volume = .5f;
             audioSource.Play();
+            HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Left);
+            HapticsUtility.SendHapticImpulse(1f, .5f, HapticsUtility.Controller.Right);
             Destroy(other.gameObject);
             if (currentScore <= 3) currentScore++;
             else currentScore = 3;

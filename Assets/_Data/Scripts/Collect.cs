@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 public class Collect : MonoBehaviour
 {
     public static List<GameObject> collectedItems = null;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip collectSound;
 
     private GameObject prefabMetal;
     private GameObject prefabRock;
@@ -12,6 +15,9 @@ public class Collect : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = collectSound;
+
         collectedItems = new List<GameObject>();
 
         prefabMetal = Resources.Load("MetalThrowable") as GameObject;
@@ -50,5 +56,7 @@ public class Collect : MonoBehaviour
         Debug.Log("Collecting " + other.GetComponentInParent<Magnet>().itemAttached);
         Destroy(other.GetComponentInParent<Magnet>().itemAttached);
         other.GetComponentInParent<Magnet>().pullButton.action.Enable();
+        audioSource.Play();
+        HapticsUtility.SendHapticImpulse(.3f, .2f, HapticsUtility.Controller.Left);
     }
 }
