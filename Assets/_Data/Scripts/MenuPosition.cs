@@ -14,7 +14,8 @@ public class MenuPosition : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            transform.parent = null;
+            //transform.SetParent(null, false);
+            startMenu.SetActive(true);
         }
         else
         {
@@ -52,7 +53,8 @@ public class MenuPosition : MonoBehaviour
 
     private void OnDestroy()
     {
-        pullButton.action.performed -= ToggleMenu;
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            pullButton.action.performed -= ToggleMenu;
         //pullButton.action.canceled -= HideMenu;
     }
 }

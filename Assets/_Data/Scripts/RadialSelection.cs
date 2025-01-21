@@ -5,7 +5,6 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
-
 public class RadialSelection : MonoBehaviour
 {
     
